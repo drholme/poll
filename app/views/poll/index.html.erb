@@ -12,9 +12,11 @@
     <input type="submit" value="submit">
     <%# ^^^ submit button %>
 </div>
-<div>
+
+<div class="columns">
     <% @option.each do |names| %>
-        <%= names.name %>
+
+        <div class="option"><%= names.name %></div>
 
     <% end %>
 </div>    

@@ -16,3 +16,10 @@
     font-size: 12pt;
 }
 
+.columns {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align:center;
+    position: relative;
+    justify-items:center;
+}
