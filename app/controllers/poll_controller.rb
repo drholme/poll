@@ -12,5 +12,6 @@ class PollController < ApplicationController
     redirect_to option_index_url
   end
 
+  
 
 end
