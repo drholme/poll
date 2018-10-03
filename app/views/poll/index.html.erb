@@ -1,2 +1,8 @@
-<h1>Poll#index</h1>
-<p>Find me in app/views/poll/index.html.erb</p>
+<div>
+    <form action="/poll/create" method="post">
+    <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
+    <div>Name: <input id="name" name="name" type="text"></div>
+    <%# ^^^ authenticity token for a form + an input text box %>
+    <input type="submit" value="submit">
+    <%# ^^^ submit button %>
+</div>
