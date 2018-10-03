@@ -1,3 +1,4 @@
+
 <div>
     <form action="/poll/create" method="post">
     <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
@@ -6,3 +7,11 @@
     <input type="submit" value="submit">
     <%# ^^^ submit button %>
 </div>
+<div>
+    <% @option.each do |names| %>
+        <%= names.name %>
+
+    <% end %>
+</div>    
+
+     

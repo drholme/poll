@@ -9,9 +9,9 @@ class PollController < ApplicationController
     @option.name = params["name"]
     @option.tally = params["tally"]
     @option.save
-    redirect_to option_index_url
+    redirect_to poll_index_url
   end
 
-  
+
 
 end
