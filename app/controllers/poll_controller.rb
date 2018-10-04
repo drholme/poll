@@ -5,6 +5,7 @@ class PollController < ApplicationController
 
   def results
     @option = Option.all
+    @option.order("tally ASC")
   end
 
   def create
@@ -19,8 +20,6 @@ class PollController < ApplicationController
   def vote
     @option = Option.find(params[:id])
     #these are columns
-    # @option.name = params["name"]
-    # @option.tally = params["tally"]
     @option.tally += 1
     @option.save
     redirect_to poll_results_url
