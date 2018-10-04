@@ -1,0 +1,9 @@
+<div>
+ <div class="header"><h1>The voting results</h1></div>
+    <% @option.each do |names| %>
+        <div class="option">
+        <%= names.name%>
+        <%= names.tally %> 
+        </div>
+    <% end %>
+</div>   

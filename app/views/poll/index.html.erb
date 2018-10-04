@@ -7,27 +7,26 @@
 
 <div class="form">
     <form action="/poll/create" method="post">
-    <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
-    <div>Name: <input id="name" name="name" type="text"></div>
-    <%# ^^^ authenticity token for a form + an input text box %>
-    <input type="submit" value="submit">
-    <%# ^^^ submit button %>
+      <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
+      <div>Name: <input id="name" name="name" type="text"></div>
+      <%# ^^^ authenticity token for a form + an input text box %>
+      <input type="submit" value="submit">
+      <%# ^^^ submit button %>
     </form>
 </div>
 
-<div class="columns">
+<div>
  <div class="header"><h1>Name</h1></div>
     <% @option.each do |names| %>
-<div class="option"><%= names.name %>
-<div  class="thecheck">
-    <form action="/poll/vote" method="post">
-    <input type="hidden" name="id" value="<%=names.id%>">
-    <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
-    <input type="image" name="BloodyArrow" height="25px" width="30px" src=http://i66.tinypic.com/4kwxl0.png>
-    </form>
-</div>  
-</div>
-  
+        <div class="option"><%= names.name %>
+            <div  class="thecheck">
+              <form action="/poll/vote" method="post">
+                <input type="hidden" name="id" value="<%=names.id%>">
+                <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
+                <input type="image" name="BloodyArrow" height="25px" width="30px" src=http://i66.tinypic.com/4kwxl0.png>
+              </form>
+            </div>  
+        </div>
     <% end %>
 </div>    
 

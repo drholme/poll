@@ -3,6 +3,10 @@ class PollController < ApplicationController
     @option = Option.all
   end
 
+  def results
+    @option = Option.all
+  end
+
   def create
     @option = Option.new
     #these are columns
