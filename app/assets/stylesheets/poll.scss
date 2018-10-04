@@ -12,9 +12,18 @@
     box-shadow:2px 2px 8px black;
     text-align: left;
     overflow: hidden;
-    font-family: 'creepster' cursive;
+    font-family: 'Creepster', cursive, 'Roboto Slab', serif;
     font-size: 12pt;
     justify-items: left;
+}
+
+.container {
+   background-image: url("https://wallup.net/wp-content/uploads/2017/11/22/392612-YouTube-red.jpg");
+   background-size: cover;
+   background-position: center;
+   min-height: 100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
 }
 
 .thecheck {

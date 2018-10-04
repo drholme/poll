@@ -23,7 +23,7 @@ class PollController < ApplicationController
     # @option.tally = params["tally"]
     @option.tally += 1
     @option.save
-    redirect_to poll_index_url
+    redirect_to poll_results_url
     puts @option.tally
   end
 
