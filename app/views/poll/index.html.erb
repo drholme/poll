@@ -4,6 +4,7 @@
 
 </head>
 <body>
+
 <div class="form">
     <form action="/poll/create" method="post">
     <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
@@ -11,6 +12,7 @@
     <%# ^^^ authenticity token for a form + an input text box %>
     <input type="submit" value="submit">
     <%# ^^^ submit button %>
+    </form>
 </div>
 
 <div class="columns">
@@ -18,7 +20,7 @@
     <% @option.each do |names| %>
 <div class="option"><%= names.name %>
 <div  class="thecheck">
-    <form action="" method="">
+    <form action="/poll/vote" method="post">
     <input type="hidden" name="id" value="<%=names.id%>">
     <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
     <input type="image" name="BloodyArrow" height="25px" width="30px" src=http://i66.tinypic.com/4kwxl0.png>
