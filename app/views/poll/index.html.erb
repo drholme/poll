@@ -1,10 +1,10 @@
 <html>
 <head>
-
 <link href="https://fonts.googleapis.com/css?family=Creepster%7CRoboto+Slab" rel="stylesheet">
+
 </head>
 <body>
-<div>
+<div class="form">
     <form action="/poll/create" method="post">
     <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
     <div>Name: <input id="name" name="name" type="text"></div>
@@ -14,10 +14,18 @@
 </div>
 
 <div class="columns">
+ <div class="header"><h1>Name</h1></div>
     <% @option.each do |names| %>
-
-        <div class="option"><%= names.name %></div>
-
+<div class="option"><%= names.name %>
+<div  class="thecheck">
+    <form action="" method="">
+    <input type="hidden" name="id" value="<%=names.id%>">
+    <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
+    <input type="image" name="BloodyArrow" height="25px" width="30px" src=http://i66.tinypic.com/4kwxl0.png>
+    </form>
+</div>  
+</div>
+  
     <% end %>
 </div>    
 
